@@ -138,8 +138,8 @@ class MainActivity : SimpleActivity(), Calculator {
                 R.id.history -> showHistory()
                 R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                 R.id.unit_converter -> launchUnitConverter()
-                R.id.settings -> launchSettings()
-                R.id.about -> launchAbout()
+                /*R.id.settings -> launchSettings()
+                R.id.about -> launchAbout()*/
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true
@@ -180,10 +180,10 @@ class MainActivity : SimpleActivity(), Calculator {
         startActivity(Intent(applicationContext, UnitConverterPickerActivity::class.java))
     }
 
-    private fun launchSettings() {
+    /*private fun launchSettings() {
         hideKeyboard()
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
-    }
+    }*/
 
     private fun launchAbout() {
         val licenses = LICENSE_AUTOFITTEXTVIEW

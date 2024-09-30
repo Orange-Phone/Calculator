@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator.activities
+/*package com.simplemobiletools.calculator.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.simplemobiletools.calculator.compose.SettingsScreen
+//import com.simplemobiletools.calculator.compose.SettingsScreen
 import com.simplemobiletools.calculator.extensions.*
 import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
@@ -47,35 +47,7 @@ class SettingsActivity : AppCompatActivity() {
                 val isOrWasThankYouInstalled = onEventValue { context.isOrWasThankYouInstalled() }
                 val displayLanguage = remember { Locale.getDefault().displayLanguage }
                 val featureLockedDialogState = getFeatureLockedDialogState()
-                SettingsScreen(
-                    displayLanguage = displayLanguage,
-                    goBack = ::finish,
-                    customizeColors = ::handleCustomizeColorsClick,
-                    customizeWidgetColors = ::setupCustomizeWidgetColors,
-                    preventPhoneFromSleeping = preventPhoneFromSleeping,
-                    onPreventPhoneFromSleeping = preferences::preventPhoneFromSleeping::set,
-                    vibrateOnButtonPressFlow = vibrateOnButtonPressFlow,
-                    onVibrateOnButtonPressFlow = preferences::vibrateOnButtonPress::set,
-                    isOrWasThankYouInstalled = isOrWasThankYouInstalled,
-                    onThankYou = ::launchPurchaseThankYouIntent,
-                    isUseEnglishEnabled = isUseEnglishEnabled,
-                    isUseEnglishChecked = useEnglishFlow,
-                    onUseEnglishPress = { isChecked ->
-                        preferences.useEnglish = isChecked
-                        exitProcess(0)
-                    },
-                    onSetupLanguagePress = ::launchChangeAppLanguageIntent,
-                    useCommaAsDecimalMarkFlow = useCommaAsDecimalMarkFlow,
-                    onUseCommaAsDecimalMarkFlow = { isChecked ->
-                        preferences.useCommaAsDecimalMark = isChecked
-                        updateWidgets()
-                        ensureBackgroundThread {
-                            applicationContext.calculatorDB.deleteHistory()
-                        }
-                    },
-                    lockedCustomizeColorText = getCustomizeColorsString(),
-                    featureLockedDialogState = featureLockedDialogState
-                )
+
             }
         }
     }
@@ -102,4 +74,4 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(this)
         }
     }
-}
+}*/
